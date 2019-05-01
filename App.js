@@ -21,12 +21,15 @@ const App = () => (
         <Link to="/" underlayColor="#f0f4f7" style={styles.navItem}>
           <Text>Profile</Text>
         </Link>
+
         <Link to="/work" underlayColor="#f0f4f7" style={styles.navItem}>
           <Text>Experience</Text>
         </Link>
+
         <Link to="/portfolio" underlayColor="#f0f4f7" style={styles.navItem}>
           <Text>Portfolio</Text>
         </Link>
+
       </View>
         <Layout>
           <Route exact path="/" component={Home} />
