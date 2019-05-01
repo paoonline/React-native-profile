@@ -13,7 +13,7 @@ const Work = () =>
       </View>
       <View style={{flexDirection: 'row', justifyContent: 'space-around'}}>
           <View style={{ ...styles.top}}>
-              <Image style={{width: 180, height: 180}} source={require('../assets/pantip.png')} />
+              <Image style={{width: 180, height: 180}} source={require('../assets/pantip.jpg')} />
           </View>
           <View style={{ ...styles.top, alignSelf: 'center'}}>
               <Text style={styles.header}>Internet Marketing (Pantip.com)</Text>

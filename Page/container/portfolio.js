@@ -10,10 +10,10 @@ const port = ({ match }) => {
             view = (
                 <>
                     <View style={{ ...styles.top}}>
-                        <Image style={{width: 180, height: 180}} source={require('../assets/d1.png')} />
+                        <Image style={{width: 180, height: 180}} source={require('../assets/d1.jpg')} />
                     </View>
                     <View style={{ ...styles.top}}>
-                        <Image style={{width: 180, height: 180}} source={require('../assets/d1.png')} />
+                        <Image style={{width: 180, height: 180}} source={require('../assets/d1.jpg')} />
                     </View>
                 </>
             )
@@ -22,10 +22,10 @@ const port = ({ match }) => {
             view = (
                 <>
                     <View style={{ ...styles.top}}>
-                        <Image style={{width: 180, height: 200}} source={require('../assets/b1.png')} />
+                        <Image style={{width: 180, height: 200}} source={require('../assets/b1.jpg')} />
                     </View>
                     <View style={{ ...styles.top}}>
-                        <Image style={{width: 180, height: 200}} source={require('../assets/b2.png')} />
+                        <Image style={{width: 180, height: 200}} source={require('../assets/b2.jpg')} />
                     </View>
                 </>
             )
