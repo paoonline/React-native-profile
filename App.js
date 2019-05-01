@@ -17,6 +17,7 @@ import Layout from './Page/hoc/Layout'
 const App = () => (
   <NativeRouter>
     <View style={styles.container}>
+
       <View style={styles.nav}>
         <Link to="/" underlayColor="#f0f4f7" style={styles.navItem}>
           <Text>Profile</Text>
