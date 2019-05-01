@@ -10,10 +10,10 @@ const port = ({ match }) => {
             view = (
                 <>
                     <View style={{ ...styles.top}}>
-                        <Image style={{width: 180, height: 180}} source={require('../assets/d1.jpg')} />
+                        <Image style={{width: 300, height: 180}} source={require('../assets/d1.jpg')} />
                     </View>
                     <View style={{ ...styles.top}}>
-                        <Image style={{width: 180, height: 180}} source={require('../assets/d1.jpg')} />
+                        <Image style={{width: 300, height: 180}} source={require('../assets/d2.jpg')} />
                     </View>
                 </>
             )
@@ -42,7 +42,7 @@ const port = ({ match }) => {
   
 const Ports = ({ match }) => (
     <View>
-        <Text style={{...styles.header, ...styles.bold}}>Port</Text>
+        <Text style={{...styles.header, ...styles.bold}}>Portfolio</Text>
         <View>
         <Link
             to={`${match.url}/port1`}
