@@ -13,22 +13,23 @@ import Home from './Page/container/home'
 import Portfolio from  './Page/container/portfolio'
 import Work from  './Page/container/work'
 import Layout from './Page/hoc/Layout'
+import {styles} from './Page/style/style'
 
 const App = () => (
   <NativeRouter>
-    <View style={styles.container}>
+    <View style={styles_app.container}>
       <Layout>
-        <View style={styles.nav}>
-          <Link to="/" underlayColor="#f0f4f7" style={styles.navItem}>
-            <Text>Profile</Text>
+        <View style={styles_app.nav}>
+          <Link to="/" underlayColor="#f0f4f7" style={styles_app.navItem}>
+            <Text style={styles.color_blue}>Profile</Text>
           </Link>
 
-          <Link to="/work" underlayColor="#f0f4f7" style={styles.navItem}>
-            <Text>Experience</Text>
+          <Link to="/work" underlayColor="#f0f4f7" style={styles_app.navItem}>
+            <Text style={styles.color_blue}>Experience</Text>
           </Link>
 
-          <Link to="/portfolio" underlayColor="#f0f4f7" style={styles.navItem}>
-            <Text>Portfolio</Text>
+          <Link to="/portfolio" underlayColor="#f0f4f7" style={styles_app.navItem}>
+            <Text style={styles.color_blue}>Portfolio</Text>
           </Link>
 
         </View>
@@ -40,7 +41,7 @@ const App = () => (
   </NativeRouter>
 );
 
-const styles = StyleSheet.create({
+const styles_app = StyleSheet.create({
   container: {
     marginTop: 25,
     padding: 10,

@@ -16,6 +16,8 @@ export const styles = StyleSheet.create({
     },
     bold:{
         fontWeight:'bold'
+    },
+    color_blue:{
+        color: '#3575d3'
     }
-
 });

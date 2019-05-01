@@ -49,14 +49,14 @@ const Ports = ({ match }) => (
             style={styles.subNavItem}
             underlayColor="#f0f4f7"
         >
-            <Text>Dashboard Data-sci team</Text>
+            <Text style={styles.color_blue}>Dashboard Data-sci team</Text>
         </Link>
         <Link
             to={`${match.url}/port2`}
             style={styles.subNavItem}
             underlayColor="#f0f4f7"
         >
-            <Text>Burger Project</Text>
+            <Text style={styles.color_blue}>Burger Project</Text>
         </Link>
         </View>
 
