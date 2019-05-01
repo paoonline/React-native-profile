@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, View, ScrollView } from "react-native";
 
 const styles = StyleSheet.create({
     container: {
@@ -11,7 +11,9 @@ const styles = StyleSheet.create({
 const Layout = (props) => {
     return (
         <View style={styles.container}>
-            {props.children}
+            <ScrollView>
+                {props.children}
+            </ScrollView>
         </View>
     )
 }
