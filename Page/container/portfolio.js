@@ -1,53 +1,70 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import {Text, View, Image} from "react-native";
 import { Route, Link } from "react-router-native";
+import {styles} from '../style/style'
 
-const styles = StyleSheet.create({
-    subNavItem: {
-      padding: 5
-    },
-    port: {
-      textAlign: "center",
-      fontSize: 15
+const port = ({ match }) => {
+    let view
+    switch(match.params.portId){
+        case 'port1':
+            view = (
+                <>
+                    <View style={{ ...styles.top}}>
+                        <Image style={{width: 180, height: 180}} source={require('../assets/d1.png')} />
+                    </View>
+                    <View style={{ ...styles.top}}>
+                        <Image style={{width: 180, height: 180}} source={require('../assets/d1.png')} />
+                    </View>
+                </>
+            )
+            break;            
+        case 'port2':
+            view = (
+                <>
+                    <View style={{ ...styles.top}}>
+                        <Image style={{width: 180, height: 200}} source={require('../assets/b1.png')} />
+                    </View>
+                    <View style={{ ...styles.top}}>
+                        <Image style={{width: 180, height: 200}} source={require('../assets/b2.png')} />
+                    </View>
+                </>
+            )
+        break;
+        default:
     }
-});
-
-const port = ({ match }) => (
-    <Text style={styles.port}>{match.params.portId}</Text>
-  );
+    
+    return (
+            <View style={{flexDirection: 'column', alignSelf: 'center'}}>
+                {view}
+            </View>
+        )
+};
   
 const Ports = ({ match }) => (
     <View>
-        <Text style={styles.header}>Port</Text>
+        <Text style={{...styles.header, ...styles.bold}}>Port</Text>
         <View>
         <Link
-            to={`${match.url}/rendering`}
+            to={`${match.url}/port1`}
             style={styles.subNavItem}
             underlayColor="#f0f4f7"
         >
-            <Text>Rendering with React</Text>
+            <Text>Dashboard Data-sci team</Text>
         </Link>
         <Link
-            to={`${match.url}/components`}
+            to={`${match.url}/port2`}
             style={styles.subNavItem}
             underlayColor="#f0f4f7"
         >
-            <Text>Components</Text>
-        </Link>
-        <Link
-            to={`${match.url}/props-v-state`}
-            style={styles.subNavItem}
-            underlayColor="#f0f4f7"
-        >
-            <Text>Props v. State</Text>
+            <Text>Burger Project</Text>
         </Link>
         </View>
 
         <Route path={`${match.path}/:portId`} component={port} />
         <Route
-        exact
-        path={match.path}
-        render={() => <Text style={styles.topic}>Please select a topic.</Text>}
+            exact
+            path={match.path}
+            render={() => <Text style={styles.topic}>Please select a topic.</Text>}
         />
     </View>
 );
