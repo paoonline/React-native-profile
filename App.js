@@ -17,25 +17,24 @@ import Layout from './Page/hoc/Layout'
 const App = () => (
   <NativeRouter>
     <View style={styles.container}>
-    <Layout>
-      <View style={styles.nav}>
-        <Link to="/" underlayColor="#f0f4f7" style={styles.navItem}>
-          <Text>Profile</Text>
-        </Link>
+      <Layout>
+        <View style={styles.nav}>
+          <Link to="/" underlayColor="#f0f4f7" style={styles.navItem}>
+            <Text>Profile</Text>
+          </Link>
 
-        <Link to="/work" underlayColor="#f0f4f7" style={styles.navItem}>
-          <Text>Experience</Text>
-        </Link>
+          <Link to="/work" underlayColor="#f0f4f7" style={styles.navItem}>
+            <Text>Experience</Text>
+          </Link>
 
-        <Link to="/portfolio" underlayColor="#f0f4f7" style={styles.navItem}>
-          <Text>Portfolio</Text>
-        </Link>
+          <Link to="/portfolio" underlayColor="#f0f4f7" style={styles.navItem}>
+            <Text>Portfolio</Text>
+          </Link>
 
-      </View>
-       
-          <Route exact path="/" component={Home} />
-          <Route path="/work" component={Work} />
-          <Route path="/portfolio" component={Portfolio} />
+        </View>
+            <Route exact path="/" component={Home} />
+            <Route path="/work" component={Work} />
+            <Route path="/portfolio" component={Portfolio} />
         </Layout>
     </View>
   </NativeRouter>

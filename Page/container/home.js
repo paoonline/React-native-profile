@@ -13,7 +13,7 @@ const Home = () =>
             </View>
             <View style={{flexDirection: 'row', justifyContent: 'space-around'}}>
                 <View style={{ ...styles.top}}>
-                    <Image style={{width: 180, height: 180}} source={require('../assets/profile.jpg')} />
+                    <Image style={{width: 130, height: 130}} source={require('../assets/profile.jpg')} />
                 </View>
                 <View style={{ ...styles.top, alignSelf: 'center'}}>
                     <Text style={styles.header}>Nattawut Visuttipinat</Text>
