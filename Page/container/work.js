@@ -1,20 +1,17 @@
 import React from "react";
 import {Text, View, Image } from "react-native";
 import {styles} from '../style/style'
+import Image_box from '../components/image/image'
 
 const Work = () => 
 <>
-  <View style={{
-      flexDirection: 'column',
-      justifyContent: 'space-between',
-  }}>
-      <View>
-          <Text style={{...styles.header, ...styles.bold}}>Experience</Text>
-      </View>
+    <View style={{
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+        ...styles.left
+    }}>
       <View style={{flexDirection: 'row', justifyContent: 'space-around'}}>
-          <View style={{ ...styles.top}}>
-              <Image style={{width: 130, height: 130}} source={require('../assets/pantip.jpg')} />
-          </View>
+          <Image_box style={{width: 130, height: 130}} source={require('../assets/pantip.jpg')}/>
           <View style={{ ...styles.top, alignSelf: 'center'}}>
               <Text style={styles.header}>Internet Marketing (Pantip.com)</Text>
               <Text style={styles.header}>2018 Jan present</Text>

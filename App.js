@@ -7,55 +7,51 @@
  */
 
 import React from "react";
-import { StyleSheet, Text, View} from "react-native";
-import { NativeRouter, Route, Link } from "react-router-native";
-import Home from './Page/container/home'
+import Profile from './Page/container/profile'
 import Portfolio from  './Page/container/portfolio'
 import Work from  './Page/container/work'
 import Layout from './Page/hoc/Layout'
-import {styles} from './Page/style/style'
+import Home from './Page/container/home';
+import { createStackNavigator, createAppContainer } from "react-navigation";
 
-const App = () => (
-  <NativeRouter>
-    <View style={styles_app.container}>
-      <Layout>
-        <View style={styles_app.nav}>
-          <Link to="/" underlayColor="#f0f4f7" style={styles_app.navItem}>
-            <Text style={styles.color_blue}>Profile</Text>
-          </Link>
+const WrapProfile =  () => (
+  <Layout><Profile/></Layout>
+)
 
-          <Link to="/work" underlayColor="#f0f4f7" style={styles_app.navItem}>
-            <Text style={styles.color_blue}>Experience</Text>
-          </Link>
+const WrapWork =  () => (
+  <Layout><Work/></Layout>
+)
 
-          <Link to="/portfolio" underlayColor="#f0f4f7" style={styles_app.navItem}>
-            <Text style={styles.color_blue}>Portfolio</Text>
-          </Link>
+const WrapPortfolio =  () => (
+  <Layout><Portfolio/></Layout>
+)
 
-        </View>
-            <Route exact path="/" component={Home} />
-            <Route path="/work" component={Work} />
-            <Route path="/portfolio" component={Portfolio} />
-        </Layout>
-    </View>
-  </NativeRouter>
-);
-
-const styles_app = StyleSheet.create({
-  container: {
-    marginTop: 25,
-    padding: 10,
-   
+const AppNavigator = createStackNavigator({
+  Home: {
+    screen: Home,
+      navigationOptions: {
+        headerTitle: 'Home',
+      },
   },
-  nav: {
-    flexDirection: "row",
-    justifyContent: "space-around",
+  Profile: {
+    screen: WrapProfile,
+      navigationOptions: { 
+        headerTitle: 'Profile',
+      },
   },
-  navItem: {
-    flex: 1,
-    alignItems: "center",
-    padding: 10
+  Experience: {
+    screen: WrapWork,
+      navigationOptions: { 
+        headerTitle: 'Experience',
+      },
+  },
+  Port: {
+    screen: WrapPortfolio,
+      navigationOptions: { 
+        headerTitle: 'Portfolio',
+      },
   },
 });
 
-export default App
+
+export default createAppContainer(AppNavigator)

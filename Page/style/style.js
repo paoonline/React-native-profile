@@ -19,5 +19,8 @@ export const styles = StyleSheet.create({
     },
     color_blue:{
         color: '#3575d3'
-    }
+    },
+    left:{
+        marginLeft:10
+    },
 });

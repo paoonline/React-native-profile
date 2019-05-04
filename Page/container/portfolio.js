@@ -1,72 +1,67 @@
 import React from "react";
 import {Text, View, Image} from "react-native";
-import { Route, Link } from "react-router-native";
+import { Route, Link, NativeRouter, withRouter } from "react-router-native";
 import {styles} from '../style/style'
+import Image_box from '../components/image/image'
 
-const port = ({ match }) => {
+const port = ( match ) => {
     let view
-    switch(match.params.portId){
-        case 'port1':
+    switch(match.location.pathname){
+        case '/port1':
             view = (
                 <>
-                    <View style={{ ...styles.top}}>
-                        <Image style={{width: 300, height: 180}} source={require('../assets/d1.jpg')} />
-                    </View>
-                    <View style={{ ...styles.top}}>
-                        <Image style={{width: 300, height: 180}} source={require('../assets/d2.jpg')} />
-                    </View>
+                    <Image_box style={{width: 350, height: 220}} source={require('../assets/d1.jpg')}/>
+                    <Image_box style={{width: 350, height: 220}} source={require('../assets/d2.jpg')}/>
                 </>
             )
-            break;            
-        case 'port2':
+            break;
+        case '/port2':
             view = (
                 <>
-                    <View style={{ ...styles.top}}>
-                        <Image style={{width: 180, height: 200}} source={require('../assets/b1.jpg')} />
-                    </View>
-                    <View style={{ ...styles.top}}>
-                        <Image style={{width: 180, height: 200}} source={require('../assets/b2.jpg')} />
-                    </View>
+                    <Image_box style={{width: 250, height: 300}} source={require('../assets/b1.jpg')}/>
+                    <Image_box style={{width: 250, height: 300}} source={require('../assets/b2.jpg')}/>
                 </>
             )
         break;
         default:
     }
-    
     return (
             <View style={{flexDirection: 'column', alignSelf: 'center'}}>
                 {view}
             </View>
         )
 };
-  
-const Ports = ({ match }) => (
-    <View>
-        <Text style={{...styles.header, ...styles.bold}}>Portfolio</Text>
-        <View>
-        <Link
-            to={`${match.url}/port1`}
-            style={styles.subNavItem}
-            underlayColor="#f0f4f7"
-        >
-            <Text style={styles.color_blue}>Dashboard Data-sci team</Text>
-        </Link>
-        <Link
-            to={`${match.url}/port2`}
-            style={styles.subNavItem}
-            underlayColor="#f0f4f7"
-        >
-            <Text style={styles.color_blue}>Burger Project</Text>
-        </Link>
-        </View>
 
-        <Route path={`${match.path}/:portId`} component={port} />
-        <Route
-            exact
-            path={match.path}
-            render={() => <Text style={styles.topic}>Please select a topic.</Text>}
-        />
-    </View>
-);
+const Ports = () => {
+    return (
+        <NativeRouter>
+            <View>
+
+                <Link
+                    to={`/port1`}
+                    style={styles.subNavItem}
+                    underlayColor="#f0f4f7"
+                >
+                    <Text style={styles.color_blue}>Dashboard Data-sci team</Text>
+                </Link>
+                <Link
+                    to={`/port2`}
+                    style={styles.subNavItem}
+                    underlayColor="#f0f4f7"
+                >
+                    <Text style={styles.color_blue}>Burger Project</Text>
+                </Link>
+
+                    <Route path={`/port1`} component={port} />
+                    <Route path={`/port2`} component={port} />
+                    {/* <Route
+                        exact
+                        path={`/`}
+                        render={() => <Text style={{...styles.topic, ...styles.left}}>Please select a topic.</Text>}
+                    /> */}
+                </View>
+        </NativeRouter>
+    );
+}
 
 export default Ports
