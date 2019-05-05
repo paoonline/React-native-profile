@@ -6,28 +6,13 @@
  * @flow
  */
 
-import React from "react";
 import Profile from './Page/container/profile'
 import Portfolio from  './Page/container/portfolio'
 import Work from  './Page/container/work'
-import Layout from './Page/hoc/Layout'
 import Home from './Page/container/home';
 import { createStackNavigator, createAppContainer, createSwitchNavigator } from "react-navigation";
-
 import AuthLoadingScreen from './Page/components/auth/authloading'
 import SignInScreen from './Page/components/auth/signin'
-
-const WrapProfile =  () => (
-  <Layout><Profile/></Layout>
-)
-
-const WrapWork =  () => (
-  <Layout><Work/></Layout>
-)
-
-const WrapPortfolio =  () => (
-  <Layout><Portfolio/></Layout>
-)
 
 const AppStack = createStackNavigator({
   Home: {
@@ -37,19 +22,19 @@ const AppStack = createStackNavigator({
       },
   },
   Profile: {
-    screen: WrapProfile,
+    screen: Profile,
       navigationOptions: { 
         headerTitle: 'Profile',
       },
   },
   Experience: {
-    screen: WrapWork,
+    screen: Work,
       navigationOptions: { 
         headerTitle: 'Experience',
       },
   },
   Port: {
-    screen: WrapPortfolio,
+    screen: Portfolio,
       navigationOptions: { 
         headerTitle: 'Portfolio',
       },

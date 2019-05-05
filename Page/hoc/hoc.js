@@ -8,14 +8,12 @@ const styles = StyleSheet.create({
     },
 });
 
-const Layout = (props) => {
-    return (
+const Hoc = Comp => ({children, ...props}) => (
+    <ScrollView>
         <View style={styles.container}>
-            <ScrollView>
-                {props.children}
-            </ScrollView>
+            <Comp {...props} style={styles.container}/>
         </View>
-    )
-}
+    </ScrollView>
+)
 
-export default Layout
+export default Hoc

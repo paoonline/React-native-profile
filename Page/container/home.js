@@ -1,7 +1,8 @@
 import React,{Component} from 'react';
-import { StyleSheet, Text, View, TouchableOpacity, ScrollView} from "react-native";
+import { StyleSheet, Text, View, TouchableOpacity} from "react-native";
 import Image_box from '../components/image/image'
 import AsyncStorage from '@react-native-community/async-storage';
+import Hoc from '../hoc/hoc'
 
 class HomeScreen extends Component {
   _signOutAsync = async () => {
@@ -11,9 +12,8 @@ class HomeScreen extends Component {
 
   render(){
     return (
-      <ScrollView>
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-          <Image_box style={{width: 200, height: 200, marginTop: 40, marginBottom:10}} source={require('../assets/profile.jpg')}/>
+          <Image_box style={{width: 200, height: 200, marginTop: 20, marginBottom:10}} source={require('../assets/profile.jpg')}/>
           <View
             style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
             <TouchableOpacity
@@ -40,7 +40,6 @@ class HomeScreen extends Component {
             </TouchableOpacity>
           </View>
       </View>
-      </ScrollView>
     )
   }
 }
@@ -55,4 +54,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default HomeScreen
+export default Hoc(HomeScreen)

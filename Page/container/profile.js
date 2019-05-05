@@ -2,6 +2,7 @@ import React from "react";
 import {Text, View } from "react-native";
 import {styles} from '../style/style'
 import Image_box from '../components/image/image'
+import Hoc from '../hoc/hoc'
 
 const Profile = () =>
     <>
@@ -30,4 +31,4 @@ const Profile = () =>
         </View>
     </>
 
-export default Profile
+export default Hoc(Profile)

@@ -1,7 +1,8 @@
 import React from "react";
-import {Text, View, Image } from "react-native";
+import {Text, View} from "react-native";
 import {styles} from '../style/style'
 import Image_box from '../components/image/image'
+import Hoc from '../hoc/hoc'
 
 const Work = () => 
 <>
@@ -33,4 +34,4 @@ const Work = () =>
   </View>
 </>
 
-export default Work
+export default Hoc(Work)

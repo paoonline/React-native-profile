@@ -3,6 +3,7 @@ import {Text, View, Image} from "react-native";
 import { Route, Link, NativeRouter, withRouter } from "react-router-native";
 import {styles} from '../style/style'
 import Image_box from '../components/image/image'
+import Hoc from '../hoc/hoc'
 
 const Porfolio = ( match ) => {
     let view
@@ -36,7 +37,6 @@ const Porfolios = () => {
     return (
         <NativeRouter>
             <View>
-
                 <Link
                     to={`/port1`}
                     style={styles.subNavItem}
@@ -64,4 +64,4 @@ const Porfolios = () => {
     );
 }
 
-export default Porfolios
+export default Hoc(Porfolios)
