@@ -12,7 +12,7 @@ class HomeScreen extends Component {
 
   render(){
     return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', marginLeft:-10 }}>
           <Image_box style={{width: 200, height: 200, marginTop: 20, marginBottom:10}} source={require('../assets/profile.jpg')}/>
           <View
             style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
