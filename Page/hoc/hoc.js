@@ -1,17 +1,19 @@
 import React from "react";
 import { StyleSheet, View, ScrollView } from "react-native";
+import {styles} from '../style/style'
 
-const styles = StyleSheet.create({
+const style = StyleSheet.create({
     container: {
       fontSize: 20,
-      marginTop: 20
+      marginTop: 20,
+      ...styles.left
     },
 });
 
 const Hoc = Comp => ({children, ...props}) => (
     <ScrollView>
-        <View style={styles.container}>
-            <Comp {...props} style={styles.container}/>
+        <View style={style.container}>
+            <Comp {...props} style={style.container}/>
         </View>
     </ScrollView>
 )

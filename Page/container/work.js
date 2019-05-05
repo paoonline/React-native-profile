@@ -9,11 +9,10 @@ const Work = () =>
     <View style={{
         flexDirection: 'column',
         justifyContent: 'space-between',
-        ...styles.left
     }}>
       <View style={{flexDirection: 'row', justifyContent: 'space-around'}}>
-          <Image_box style={{width: 130, height: 130}} source={require('../assets/pantip.jpg')}/>
-          <View style={{ ...styles.top, alignSelf: 'center'}}>
+          <Image_box style={{marginTop:-20, width: 130, height: 130}} source={require('../assets/pantip.jpg')}/>
+          <View style={{alignSelf: 'center'}}>
               <Text style={styles.header}>Internet Marketing (Pantip.com)</Text>
               <Text style={styles.header}>2018 Jan present</Text>
           </View>

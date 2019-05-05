@@ -9,7 +9,6 @@ const Profile = () =>
         <View style={{
             flexDirection: 'column',
             justifyContent: 'space-between',
-            ...styles.left
         }}>
             <View style={{flexDirection: 'row', justifyContent: 'space-around'}}>
                 <Image_box style={{width: 130, height: 130}} source={require('../assets/profile.jpg')}/>
