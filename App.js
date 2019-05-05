@@ -12,7 +12,10 @@ import Portfolio from  './Page/container/portfolio'
 import Work from  './Page/container/work'
 import Layout from './Page/hoc/Layout'
 import Home from './Page/container/home';
-import { createStackNavigator, createAppContainer } from "react-navigation";
+import { createStackNavigator, createAppContainer, createSwitchNavigator } from "react-navigation";
+
+import AuthLoadingScreen from './Page/components/auth/authloading'
+import SignInScreen from './Page/components/auth/signin'
 
 const WrapProfile =  () => (
   <Layout><Profile/></Layout>
@@ -26,7 +29,7 @@ const WrapPortfolio =  () => (
   <Layout><Portfolio/></Layout>
 )
 
-const AppNavigator = createStackNavigator({
+const AppStack = createStackNavigator({
   Home: {
     screen: Home,
       navigationOptions: {
@@ -53,5 +56,15 @@ const AppNavigator = createStackNavigator({
   },
 });
 
+const AuthStack = createStackNavigator({ SignIn: SignInScreen });
 
-export default createAppContainer(AppNavigator)
+export default createAppContainer(createSwitchNavigator(
+  {
+    AuthLoading: AuthLoadingScreen,
+    App: AppStack,
+    Auth: AuthStack,
+  },
+  {
+    initialRouteName: 'AuthLoading',
+  }
+));

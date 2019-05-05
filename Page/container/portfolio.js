@@ -4,7 +4,7 @@ import { Route, Link, NativeRouter, withRouter } from "react-router-native";
 import {styles} from '../style/style'
 import Image_box from '../components/image/image'
 
-const port = ( match ) => {
+const Porfolio = ( match ) => {
     let view
     switch(match.location.pathname){
         case '/port1':
@@ -18,8 +18,8 @@ const port = ( match ) => {
         case '/port2':
             view = (
                 <>
-                    <Image_box style={{width: 250, height: 300}} source={require('../assets/b1.jpg')}/>
-                    <Image_box style={{width: 250, height: 300}} source={require('../assets/b2.jpg')}/>
+                    <Image_box style={{width: 270, height: 300}} source={require('../assets/b1.jpg')}/>
+                    <Image_box style={{width: 270, height: 300}} source={require('../assets/b2.jpg')}/>
                 </>
             )
         break;
@@ -32,7 +32,7 @@ const port = ( match ) => {
         )
 };
 
-const Ports = () => {
+const Porfolios = () => {
     return (
         <NativeRouter>
             <View>
@@ -52,8 +52,8 @@ const Ports = () => {
                     <Text style={styles.color_blue}>Burger Project</Text>
                 </Link>
 
-                    <Route path={`/port1`} component={port} />
-                    <Route path={`/port2`} component={port} />
+                    <Route path={`/port1`} component={Porfolio} />
+                    <Route path={`/port2`} component={Porfolio} />
                     {/* <Route
                         exact
                         path={`/`}
@@ -64,4 +64,4 @@ const Ports = () => {
     );
 }
 
-export default Ports
+export default Porfolios
