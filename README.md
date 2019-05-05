@@ -1,5 +1,6 @@
 # React-native-profile
 
-![alt text](https://user-images.githubusercontent.com/31764710/57010864-2e6f0f00-6c29-11e9-91f8-d9dd23a7bb3d.JPG)
-![alt text](https://user-images.githubusercontent.com/31764710/57010866-2fa03c00-6c29-11e9-9f0f-d8cbd8e29495.JPG)
-![alt text](https://user-images.githubusercontent.com/31764710/57018927-55403c00-6c4f-11e9-93bf-d58aaca895ac.JPG)
+![alt text](https://user-images.githubusercontent.com/31764710/57196504-a3bf4480-6f87-11e9-9343-ff06c5c13173.JPG)
+![alt text](https://user-images.githubusercontent.com/31764710/57196506-a5890800-6f87-11e9-845f-2ecf4ae0f589.JPG)
+![alt text](ttps://user-images.githubusercontent.com/31764710/57196509-a7eb6200-6f87-11e9-813c-b060d87dddd5.JPG)
+![alt text](https://user-images.githubusercontent.com/31764710/57196508-a7eb6200-6f87-11e9-9646-666efcdf908f.JPG)
