@@ -13,7 +13,7 @@ class SignInScreen extends Component {
     render() {
       return (
         <View>
-          <Button title="Sign in!" onPress={this._signInAsync} />
+          <Button title="Sign in" onPress={this._signInAsync} />
         </View>
       );
     }
