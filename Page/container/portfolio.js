@@ -11,8 +11,8 @@ const Porfolio = ( match ) => {
         case '/port1':
             view = (
                 <>
-                    <Image_box style={{width: 350, height: 220}} source={require('../assets/d1.jpg')}/>
-                    <Image_box style={{width: 350, height: 220}} source={require('../assets/d2.jpg')}/>
+                    <Image_box style={{width: 300, height: 220}} source={require('../assets/d1.jpg')}/>
+                    <Image_box style={{width: 300, height: 220}} source={require('../assets/d2.jpg')}/>
                 </>
             )
             break;
